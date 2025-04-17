@@ -1,0 +1,48 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+nav {
+  margin: 100px;
+
+  button {
+    border: none;
+    background: gray;
+    padding: 15px 40px;
+    font: bold 1rem/1 "arial";
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+  }
+}
+
+//쿠키 팝업 스타일
+aside {
+  width: 600px;
+  padding: 50px;
+  background: linear-gradient(45deg, violet, hotpink);
+  margin: 100px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(255, 105, 180, 0.276);
+
+  .con {
+    min-height: 100px;
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      font: 1rem/1 "맑은 고딕";
+      color: white;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+    }
+  }
+}

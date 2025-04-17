@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="cookie.js"></script>
 </head>
+
 <body>
-  
+  <!-- 쿠키값 제어 버튼 (테스트 용도) -->
+  <nav>
+    <button>OPEN</button>
+    <button>VIEW COOKIE</button>
+    <button>DELETE COOKIE</button>
+  </nav>
+
+  <!-- 쿠키 팝업 -->
+  <aside>
+    <div class="con"></div>
+    <div class="controls">
+      <p><input type="checkbox" id="ck"><label for="ck">오늘하루 보지 않기</label></p>
+      <button>close</button>
+    </div>
+  </aside>
 </body>
+
 </html>
