@@ -3,29 +3,44 @@ const popup = document.querySelector("aside");
 const ck = popup.querySelector("#ck");
 const close = popup.querySelector('button');
 
-// 기본 팝업 열고 닫기 이벤트
+let isCookie = document.cookie.indexOf("popup=done");
+popup.style.display = (isCookie < 0) ? "block" : "none";
+// if(isCookie < 0){
+//   popup.style.display = 'block';
+// } else{
+//   popup.style.display = 'none';
+// }
+
+// 팝업 이벤트
 open.addEventListener('click', ()=>{
   popup.style.display = 'block';
-});
-close.addEventListener('click', ()=>{
-  popup.style.display = 'none';
+  ck.checked = false;
 });
 
-// 쿠키 생성 이벤트
+// 쿠키 생성
 create.addEventListener('click', ()=>{
   setCookie("popup", "done", 1);
   alert("오늘부터 1일동안 유지되는 쿠키 생성");
 });
 
-//쿠키 확인 이벤트
+//쿠키 확인
 view.addEventListener('click', ()=>{
   console.log(document.cookie);
 })
 
-// 쿠키 삭제 이벤트
+// 쿠키 삭제
 del.addEventListener('click', ()=>{
   setCookie("popup", "done", -1);
   alert("popup=done 쿠키 삭제");
+});
+
+
+close.addEventListener('click', ()=>{
+  popup.style.display = 'none';
+  console.dir(ck);
+  // 닫기 버튼 클릭시 체크박스가 활성화 되어 있으면 쿠키 생성
+  if(ck.checked) setCookie("popup", "done", 0);
+
 });
 
 //쿠키 생성 함수
